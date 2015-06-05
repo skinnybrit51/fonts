@@ -8,9 +8,22 @@
 
 <body>
 
-<p class="font-size-eight">8 font size.</p>
+Fonts are scaled according to the width of the page.
+<ul>
+    <li>< 768px, scaled by 0.7</li>
+    <li>768px - 992px, scaled by 0.8</li>
+    <li>992px - 1200px, scaled by 1</li>
+    <li>1200px, scaled by 1.1</li>
+</ul>
+<p>Base font is set to 62.5%.  This allows 16px to become 10px.  This is nice as it makes multiplying fonts easy.  See recommendation under <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">ems header</a>.</p>
 
-<p class="">BASE font size.</p>
+<p>The `rem` unit work solely off the root `html` tag.  <a href="http://www.w3.org/Style/Examples/007/units.en.html">w3c doc</a></p>
+
+<p>It should be minded that the base font size (usually 16px) is determined by the user settings for fonts in the browser or device.  Also bare in mind the minimum font size is configurable.</p>
+
+<p>The below sizes are only those sizes when the scale factor is 1 and the default font size from the browser or device is set to 16px.</p>
+
+<p class="font-size-eight">8 font size.</p>
 
 <p class="font-size-twelve">12 font size.</p>
 
@@ -33,6 +46,7 @@
 
 <p class="font-size-fifty">50 font size.</p>
 
+Show nested elements do not suffer from the same effect of proportional sizing like there counter unit type em.
 <ul class="20px">
     <li>1</li>
     <li>2</li>

@@ -34,25 +34,25 @@ body {
 
 // < 768px
 .setFontSize(@size) {
-  @media only screen and (max-width: @screen-xs-max) {
+  @media only screen and (max-width: 767px) {
     @scaleFactor: 0.7;
     font-size: (@size * @scaleFactor);
   }
 
   // 768px - 992px
-  @media only screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
     @scaleFactor: 0.8;
     font-size: (@size * @scaleFactor);
   }
 
   // 992px - 1200px
-  @media only screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
     @scaleFactor: 1;
     font-size: (@size * @scaleFactor);
   }
 
   // > 1200px
-  @media only screen and (min-width: @screen-lg-min) {
+  @media only screen and (min-width: 1200px) {
     @scaleFactor: 1.1;
     font-size: (@size * @scaleFactor);
   }
