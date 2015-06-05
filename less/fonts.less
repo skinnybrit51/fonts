@@ -1,0 +1,61 @@
+/**
+* SIZES - based off default browser settings, where 1px == 16px
+*/
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  font-size: @font-size-sixteen;
+}
+
+// 8px
+@font-size-eight: 0.8rem;
+// 12px
+@font-size-twelve: 1.2rem;
+// 14px
+@font-size-fourteen: 1.4rem;
+// 16px
+@font-size-sixteen: 1.6rem;
+// 18px
+@font-size-eighteen: 1.8rem;
+// 22px
+@font-size-twentytwo: 2.2rem;
+// 26px
+@font-size-twentysix: 2.6rem;
+// 30px
+@font-size-thirty: 3rem;
+// 36px
+@font-size-thirtysix: 3.6rem;
+// 42px
+@font-size-fourtytwo: 4.2rem;
+// 50px
+@font-size-fifty: 5rem;
+
+// < 768px
+.setFontSize(@size) {
+  @media only screen and (max-width: @screen-xs-max) {
+    @scaleFactor: 0.7;
+    font-size: (@size * @scaleFactor);
+  }
+
+  // 768px - 992px
+  @media only screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    @scaleFactor: 0.8;
+    font-size: (@size * @scaleFactor);
+  }
+
+  // 992px - 1200px
+  @media only screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    @scaleFactor: 1;
+    font-size: (@size * @scaleFactor);
+  }
+
+  // > 1200px
+  @media only screen and (min-width: @screen-lg-min) {
+    @scaleFactor: 1.1;
+    font-size: (@size * @scaleFactor);
+  }
+
+}
+
